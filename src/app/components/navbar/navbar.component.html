@@ -13,9 +13,9 @@
         </ul>
 
         <div class="actions">
-            <button>Login</button>
+            <button type="button" (click)="this.authService.login()" *ngIf="!this.authService.isLoggedin">Login</button>
             
-            <button>Logout</button>
+            <button type="button" (click)="this.authService.logout()" *ngIf="this.authService.isLoggedin">Logout</button>
         </div>
     </div>
 </nav>
