@@ -1,0 +1,30 @@
+.wrapper{
+    width: 100vw;
+    height: calc(100vh - 76px);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.content{
+    width:40vw;
+}
+
+h4{
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+.content > div{
+    width: 35vw;
+    padding-left: 20px;
+}
+
+ul{
+    margin: 15px 0;
+    padding-left: 40px;
+}
+
+li{
+    margin: 10px 0;
+}

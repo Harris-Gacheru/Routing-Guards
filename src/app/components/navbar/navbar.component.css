@@ -49,3 +49,9 @@ ul{
 button{
     padding: 8px 10px;
 }
+
+.active{
+    padding: 8px 12px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+}
