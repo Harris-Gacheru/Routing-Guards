@@ -10,7 +10,7 @@ nav{
 
 .menu{
     display: flex;
-    width: 75vw;
+    width: 70vw;
     align-items: center;
     justify-content: space-between;
 }
