@@ -8,7 +8,8 @@ import { AddproductsComponent } from './components/addproducts/addproducts.compo
 import { ShowproductsComponent } from './components/showproducts/showproducts.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ShowusersComponent } from './components/showusers/showusers.component';
-import { DialogComponent } from './components/dialog/dialog.component';
+import { InstructionComponent } from './components/instruction/instruction.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -18,12 +19,13 @@ import { DialogComponent } from './components/dialog/dialog.component';
     AddproductsComponent,
     ShowproductsComponent,
     ShowusersComponent,
-    DialogComponent
+    InstructionComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

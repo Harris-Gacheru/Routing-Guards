@@ -2,7 +2,7 @@
     <div class="content">
         <h4>Add User</h4>
         <p *ngIf="msg">{{ msg }}</p>
-        <form [formGroup]="userForm">
+        <form [formGroup]="Form">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" formControlName="name">
@@ -13,7 +13,7 @@
                 <input type="text" formControlName="email">
             </div>
 
-            <button type="submit" (click)="submit()" [disabled]="userForm.invalid">Add</button>
+            <button type="submit" (click)="submit()" [disabled]="Form.invalid">Add</button>
         </form>
     </div>
 </div>
