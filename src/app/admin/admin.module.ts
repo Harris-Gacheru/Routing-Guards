@@ -6,6 +6,9 @@ import { AdminComponent } from './admin/admin.component';
 import { AdduserComponent } from './components/adduser/adduser.component';
 import { AddproductsComponent } from './components/addproducts/addproducts.component';
 import { ShowproductsComponent } from './components/showproducts/showproducts.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ShowusersComponent } from './components/showusers/showusers.component';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 
 @NgModule({
@@ -13,11 +16,14 @@ import { ShowproductsComponent } from './components/showproducts/showproducts.co
     AdminComponent,
     AdduserComponent,
     AddproductsComponent,
-    ShowproductsComponent
+    ShowproductsComponent,
+    ShowusersComponent,
+    DialogComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   isLoggedin: boolean = false;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   login(){
     console.log('Logging in...')
@@ -16,5 +17,6 @@ export class AuthService {
   logout(){
     console.log('Logging out...')
     this.isLoggedin = false
+    this.route.navigate(['/'])
   }
 }

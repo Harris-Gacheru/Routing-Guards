@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-adduser',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./adduser.component.css']
 })
 export class AdduserComponent implements OnInit {
+  userForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required]
+  })
 
-  constructor() { }
+  msg: string = ''
+  
+  constructor(private fb: FormBuilder, private usersService: UsersService) { }
 
   ngOnInit(): void {
+
+  }
+
+  submit(){
+    this.msg = 'Added successfully'
+    this.usersService.addUsers(this.userForm.value)
+
+    setTimeout(() => {
+      this.msg = ''
+    }, 1000);
   }
 
 }
